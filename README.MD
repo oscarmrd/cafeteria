@@ -13,7 +13,7 @@
 
 3. En el archivo conexion.php se encuentra la configuración de la Conexión a base de datos   
 
-3. Ya se puede probar el aplicativo.
+4. Ya se puede probar el aplicativo.
 
 
 # Funcionamiento del Aplicativo
