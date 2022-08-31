@@ -1,0 +1,11 @@
+1.- Consulta el producto que más stock tiene
+
+SELECT MAX(stock) AS MaxStock
+  FROM producto
+
+2.- Consulta del producto más vendido
+
+SELECT producto.nombreproducto, SUM(producto_venta.cantidad) as cantidad
+    FROM producto_venta JOIN producto ON producto_venta.idproducto = producto.idproducto
+    GROUP BY producto.idproducto
+    ORDER BY SUM(producto_venta.cantidad) DESC LIMIT 1; 
