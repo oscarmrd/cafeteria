@@ -8,10 +8,10 @@
 
   
 
-2. En phpmyadmin por ejemplo se puede ejecutar el SQL que está en el archivo db_cafeteria 
+2. En phpmyadmin por ejemplo se puede ejecutar el SQL que está en el archivo db_cafeteria.sql 
    el cual crea la base de datos y carga datos de prueba.
 
-  
+3. En el archivo conexion.php se encuentra la configuración de la Conexión a base de datos   
 
 3. Ya se puede probar el aplicativo.
 
