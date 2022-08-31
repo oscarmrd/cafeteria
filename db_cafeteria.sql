@@ -41,24 +41,33 @@ INSERT INTO `producto` (`idproducto`, `nombreproducto`, `referencia`, `precio`, 
 (5, 'Frijol', 'ver1', 3000, 3, 'VERDURAS', 8, '2022-08-30'),
 (6, 'Arveja', 'ver2', 4500, 1, 'VERDURAS', 11, '2022-08-30');
 
+
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `venta`
+--
+
+
+INSERT INTO venta (idventa, fecha, total) VALUES
+(1, '2022-08-30', '5000.00'),
+(2, '2022-08-30', '1500.00'),
+(3, '2022-08-30', '37500.00'),
+(4, '2022-08-30', '11000.00'),
+(5, '2022-08-30', '1500.00'),
+(6, '2022-08-30', '17500.00'),
+(7, '2022-08-30', '0.00');
+
 -- --------------------------------------------------------
 
 --
 -- Table structure for table `producto_venta`
 --
 
-CREATE TABLE `producto_venta` (
-  `id` bigint(20) UNSIGNED NOT NULL,
-  `idproducto` bigint(20) UNSIGNED NOT NULL,
-  `cantidad` bigint(20) UNSIGNED NOT NULL,
-  `idventa` bigint(20) UNSIGNED NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
---
--- Dumping data for table `producto_venta`
---
 
-INSERT INTO `producto_venta` (`id`, `idproducto`, `cantidad`, `idventa`) VALUES
+INSERT INTO producto_venta (id, idproducto, cantidad, idventa) VALUES
 (1, 1, 1, 1),
 (2, 2, 1, 2),
 (3, 3, 3, 3),
@@ -69,30 +78,6 @@ INSERT INTO `producto_venta` (`id`, `idproducto`, `cantidad`, `idventa`) VALUES
 (8, 1, 1, 6),
 (9, 3, 5, 6);
 
--- --------------------------------------------------------
-
---
--- Table structure for table `venta`
---
-
-CREATE TABLE `venta` (
-  `idventa` bigint(20) UNSIGNED NOT NULL,
-  `fecha` date DEFAULT NULL,
-  `total` decimal(7,2) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
---
--- Dumping data for table `venta`
---
-
-INSERT INTO `venta` (`idventa`, `fecha`, `total`) VALUES
-(1, '2022-08-30', '5000.00'),
-(2, '2022-08-30', '1500.00'),
-(3, '2022-08-30', '37500.00'),
-(4, '2022-08-30', '11000.00'),
-(5, '2022-08-30', '1500.00'),
-(6, '2022-08-30', '17500.00'),
-(7, '2022-08-30', '0.00');
 
 --
 -- Indexes for dumped tables
