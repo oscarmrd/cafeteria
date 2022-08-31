@@ -1,0 +1,3 @@
+SELECT MAX(stock) AS MaxStock
+  FROM producto
+
